@@ -1,20 +1,1173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
+    <title>Мандала Бажання</title>
     <link
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header"><div class="container"></div></header>
+    <header class="header">
+      <div class="container">
+        <p class="start">онлайн-курс</p>
+        <p class="start">
+          старт <span id="dateElement"></span> <span id="monthElement"></span>
+        </p>
+      </div>
+    </header>
     <main>
-      <section></section>
+      <section class="hero">
+        <picture
+          ><source
+            srcset="
+              ./src/img/hero/author-1x.png 1x,
+              ./src/img/hero/author-2x.png 2x
+            "
+            width="257"
+            height="auto" />
+          <img
+            class="author-hero-image"
+            src="./src/img/hero/author-1x.png"
+            alt="mandala"
+            width="257"
+            height="auto"
+        /></picture>
+        <div class="container">
+          <h1 class="title">Мандала Бажання:</h1>
+          <p class="subtitle">активований намір за 7 днів</p>
+          <picture
+            ><source
+              srcset="
+                ./src/img/hero/mandala-1x.png 1x,
+                ./src/img/hero/mandala-2x.png 2x
+              "
+              width="360"
+              height="auto" />
+            <img
+              class="mandala-image"
+              src="./src/img/hero/mandala-1x.png"
+              alt="mandala"
+              width="360"
+              height="auto"
+          /></picture>
+        </div>
+        <div class="wrapper">
+          <div class="container">
+            <p class="text">
+              <span>Як активувати бажане</span> завдяки мандалі та коду
+              Фібоначчі — навіть якщо ніколи не медитували чи малювали — всього
+              за 7 днів
+            </p>
+            <ul class="list">
+              <li class="list-item">
+                <p class="item-text">Структуровано, без «езо-туману»</p>
+              </li>
+              <li class="list-item">
+                <p class="item-text">
+                  Малювання = глибока медитація = активація задуманого
+                </p>
+              </li>
+              <li class="list-item">
+                <p class="item-text">
+                  Перші зміни — вже на 7-й день: знаки, ресурси, події
+                </p>
+              </li>
+              <li class="list-item">
+                <p class="item-text">Твоя мандала — оберіг, який працює 24/7</p>
+              </li>
+            </ul>
+            <a class="btn-link-container" href="">
+              <p class="btn-link">Приєднатись</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x.png 1x,
+                      ./src/img/hero/star-2x.png 2x
+                    "
+                    width="80"
+                    height="80" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x.png"
+                    alt="star-sale"
+                    width="80"
+                    height="80"
+                /></picture>
+                <p class="btn-sale-text">
+                  знижка <br />
+                  <span>-93%</span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="bonuses">
+        <div class="container">
+          <div class="timer-wrapper">
+            <img
+              src="./src/img/bonuses/timer-sc.svg"
+              alt="image"
+              class="timer-image"
+            />
+            <p class="timer-text">Акційна ціна й бонуси зникнуть через</p>
+            <div id="countdown-one" class="countdown">
+              <div class="countdown-number">
+                <span class="minutes countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="seconds countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="milliseconds countdown-time"></span>
+              </div>
+            </div>
+          </div>
+          <div class="prices-wrapper">
+            <div class="old-price">
+              <p class="price-title">Стара ціна</p>
+              <p class="price">$125</p>
+            </div>
+            <div class="new-price">
+              <p class="price-title">Сьогодні</p>
+              <p class="price">$9</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x.png 1x,
+                      ./src/img/hero/star-2x.png 2x
+                    "
+                    width="34"
+                    height="34" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x.png"
+                    alt="star-sale"
+                    width="34"
+                    height="34"
+                /></picture>
+                <p class="btn-sale-text">
+                  <span>-93%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <span class="plus-bns">+</span>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-1x.png 1x,
+                    ./src/img/bonuses/bonus-2x.png 2x
+                  "
+                  width="280"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-1x.png"
+                  alt="bonus"
+                  width="280"
+                  height="auto"
+              /></picture>
+              <p class="item-title">1. Набір сакральних мандал:</p>
+              <p class="item-text">
+                створених за допомогою древніх сакральних символів для роботи з
+                очищенням підсвідомості та активації певних сфер життя
+              </p>
+            </li>
+            <li class="list-item plus">+</li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="280"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="280"
+                  height="auto"
+              /></picture>
+              <p class="item-title">2. шаблони мандал під різні наміри</p>
+              <p class="item-text">
+                (фінанси, стосунки, енергія (здоровʼя)) - генеруючі
+                високочастотні Мандали для активації закладеного наміру
+              </p>
+            </li>
+          </ul>
+          <span class="plus-bns-last">+</span>
+          <p class="item-title">3. Чек-лист ритуалу активації</p>
+        </div>
+      </section>
+      <section class="for-whom">
+        <div class="container">
+          <h2 class="title">ДЛЯ КОГО</h2>
+          <p class="subtitle">КУРС?</p>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-title">
+                Хочеш, щоб вже перестало трясти — всередині й навколо
+              </p>
+              <p class="item-text">
+                Дістали новини, дістали тривоги, хочеться хоч трохи тиші й
+                стабільності
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Є бажання, але руки не доходять</p>
+              <p class="item-text">
+                Наче й знаєш, чого хочеш — але то діти, то робота, то просто
+                немає сил
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">
+                Хочеш стосунків, але не розумієш, в чому знову «не так»
+              </p>
+              <p class="item-text">
+                Хочеться тепла, близькості, нормального партнера — а не вічної
+                історії «сама-собі-психолог».
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Гроші наче є, але наче й немає</p>
+              <p class="item-text">
+                Приходять — і тікають. Втома від нестабільності і «виживання»
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-title">Болить голова не від погоди, а від життя</p>
+              <p class="item-text">
+                Тіло сигналить: «стоп», а ти тягнеш усе далі. Треба вже якось
+                себе підтримати
+              </p>
+            </li>
+          </ul>
+          <p class="desc">
+            Якщо в тебе є хоча б одне бажання — це вже привід дати йому шанс
+          </p>
+          <p class="text">
+            Тут не буде складних практик. Просто трохи паперу, кольору й тебе
+            справжньої
+          </p>
+          <a class="for-whom-btn" href="">Мені це треба</a>
+        </div>
+      </section>
+      <section class="about-author">
+        <div class="container">
+          <h2 class="title">ПРО</h2>
+          <p class="subtitle">АВТОРА</p>
+          <div class="author-image-box">
+            <div class="inner-wrapper">
+              <p class="desc">
+                Наталя — майстриня мандал та сакральної нумерології
+              </p>
+            </div>
+          </div>
+          <p class="short-text">Коротко й по суті:</p>
+          <ul class="list">
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                5 років практики, 2000+ індивідуальних мандал
+              </p>
+            </li>
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                Учениця Урсули Іррганг (30 років досліджень мандали Фібоначчі)
+              </p>
+            </li>
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                Курси Т. Войтович: «Мандали нового часу», «Сакральна
+                нумерологія»
+              </p>
+            </li>
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                Школа «ЕВО»: «Мандали для зцілення», «Мандала й чакри»
+              </p>
+            </li>
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                Академія «Шрінаджі» (Індія): курс «Творець», основи аюрведи,
+                васту
+              </p>
+            </li>
+            <li class="list-item">
+              <img
+                src="./src/img/author/heart.svg"
+                alt="heart"
+                class="item-image"
+                width="28"
+              />
+              <p class="item-text">
+                Автор 3 майстер-класів із мандал для жіночих ретритів
+              </p>
+            </li>
+          </ul>
+          <div class="hidden-wrapper collapsed" id="textBlock">
+            <ul class="hide-list">
+              <li class="hide-list-item">
+                Я збирала знання по крупинках у трьох країнах, щоб дати вам
+                простий, робочий інструмент. Мандала — це діалог із всесвітом
+                мовою чисел і кольору
+              </li>
+              <li class="hide-list-item">
+                Я народилась і живу у Львові. Як і багато людей, пройшла через
+                втрати, біль, зраду… У якийсь момент запитала себе: Хто я? Для
+                чого я тут? <br /><br />
+                Так почався мій шлях. Випадково відкрила світ мандал — і просто
+                малювала, без очікувань. Але з кожним штрихом щось усередині
+                змінювалось. Я ставала спокійнішою, глибшою, навчилась чути
+                себе. Серце наповнилось радістю. Люди навколо це бачили — і
+                питали, в чому мій секрет. <br /><br />
+                А секрет — у Мандалі
+              </li>
+              <li class="hide-list-item">
+                Вона змінює не тільки людину, а й простір довкола. Події, стани,
+                зустрічі — усе поступово стає на свої місця. <br /><br />
+                Сьогодні моя мета — ділитись цим інструментом гармонізації,
+                пробудження й радості з Україною та світом. Бо щастя — це наш
+                природний стан. І мандали допомагають повернутись до нього
+              </li>
+            </ul>
+          </div>
+          <button class="hide-btn" type="button" id="toggleBtn">
+            Читати далі
+          </button>
+          <a class="btn-link-container green" href="">
+            <p class="btn-link">Приєднатись — $9</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x-green.png 1x,
+                    ./src/img/hero/star-2x-green.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x-green.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-93%</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="you-get">
+        <div class="container">
+          <h2 class="title">Що отримуєте</h2>
+          <p class="subtitle">всередині</p>
+          <picture
+            ><source
+              srcset="
+                ./src/img/you-get/table-1x.jpg 1x,
+                ./src/img/you-get/table-2x.jpg 2x
+              "
+              width="360"
+              height="auto" />
+            <img
+              class="table-image"
+              src="./src/img/you-get/table-1x.jpg"
+              alt="table"
+              width="360"
+              height="auto"
+          /></picture>
+          <div class="prices-wrapper">
+            <div class="old-price">
+              <p class="price-title">Стара ціна</p>
+              <p class="price">$125</p>
+            </div>
+            <div class="new-price">
+              <p class="price-title">Сьогодні</p>
+              <p class="price">$9</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x.png 1x,
+                      ./src/img/hero/star-2x.png 2x
+                    "
+                    width="34"
+                    height="34" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x.png"
+                    alt="star-sale"
+                    width="34"
+                    height="34"
+                /></picture>
+                <p class="btn-sale-text">
+                  <span>-93%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a class="get-btn" href="">Приєднатись</a>
+        </div>
+      </section>
+      <section class="program">
+        <div class="container">
+          <h2 class="title">ПРОГРАМА</h2>
+          <p class="subtitle">КУРСУ</p>
+          <ul class="list">
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 1:</p>
+                <p class="item-title">Теорія: Мандала × Фібоначчі</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Розумієш «чому це працює»</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">Віра + внутрішня мотивація</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 2:</p>
+                <p class="item-title">Формула бажання + гематрія</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Перекладаєш фразу у числа</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">16-значний ряд</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 3:</p>
+                <p class="item-title">Будуємо ряд Фібоначчі</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Дзеркало + послідовність</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">Енергокаркас</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 4:</p>
+                <p class="item-title">Кольоровий код</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Вибір палітри, 432 Гц</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">Гармонійна схема роботи</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 5:</p>
+                <p class="item-title">Малюємо мандалу (медитація)</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Заповнюєш сегменти</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">Готовий артефакт</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="item-image-box">
+                <p class="item-number">урок 6:</p>
+                <p class="item-title">Активація + 21-денний чек-лист</p>
+              </div>
+              <div class="item-key-box">
+                <p class="key-title">Ключові дії</p>
+                <p class="key-text">Свічка, вода, афірмації</p>
+              </div>
+              <div class="item-get-box">
+                <p class="get-title">Що отримуєш</p>
+                <p class="get-text">Запуск подій</p>
+              </div>
+            </li>
+          </ul>
+          <a class="btn-link-container green" href="">
+            <p class="btn-link">Приєднатись — $9</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x-green.png 1x,
+                    ./src/img/hero/star-2x-green.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x-green.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-93%</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="bonuses green">
+        <div class="container">
+          <div class="timer-wrapper">
+            <img
+              src="./src/img/bonuses/timer-sc-green.svg"
+              alt="image"
+              class="timer-image"
+            />
+            <p class="timer-text">Акційна ціна й бонуси зникнуть через</p>
+            <div id="countdown-two" class="countdown">
+              <div class="countdown-number">
+                <span class="minutes countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="seconds countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="milliseconds countdown-time"></span>
+              </div>
+            </div>
+          </div>
+          <p class="garant-text">14-денна гарантія повернення</p>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-1x.png 1x,
+                    ./src/img/bonuses/bonus-2x.png 2x
+                  "
+                  width="280"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-1x.png"
+                  alt="bonus"
+                  width="280"
+                  height="auto"
+              /></picture>
+              <p class="item-title">1. Набір сакральних мандал:</p>
+              <p class="item-text">
+                створених за допомогою древніх сакральних символів для роботи з
+                очищенням підсвідомості та активації певних сфер життя
+              </p>
+            </li>
+            <li class="list-item plus">+</li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="280"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="280"
+                  height="auto"
+              /></picture>
+              <p class="item-title">2. шаблони мандал під різні наміри</p>
+              <p class="item-text">
+                (фінанси, стосунки, енергія (здоровʼя)) - генеруючі
+                високочастотні Мандали для активації закладеного наміру
+              </p>
+            </li>
+          </ul>
+          <span class="plus-bns-last">+</span>
+          <p class="item-title">3. Чек-лист ритуалу активації</p>
+        </div>
+      </section>
+      <section class="how-going">
+        <div class="container">
+          <h2 class="title">ЯК ПРОХОДИТЬ</h2>
+          <p class="subtitle">НАВЧАННЯ</p>
+          <div class="wrapper">
+            <img
+              class="arrow left arrow1"
+              src="./src/img/how-arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow right arrow2"
+              src="./src/img/how-arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow left arrow3"
+              src="./src/img/how-arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow right arrow4"
+              src="./src/img/how-arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow left arrow5"
+              src="./src/img/how-arrow.svg"
+              alt="arrow"
+            />
+            <ul class="list">
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">1</p></div>
+                <p class="item-text">
+                  Оплата → миттєвий лист з посиланням на email
+                </p>
+              </li>
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">2</p></div>
+                <p class="item-text">
+                  Особистий кабінет (працює з телефону й ноутбука)
+                </p>
+              </li>
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">3</p></div>
+                <p class="item-text">
+                  6 уроків відкриті одразу — дивишся коли зручно
+                </p>
+              </li>
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">4</p></div>
+                <p class="item-text">
+                  PDF-файли завантажуються під кожним відео
+                </p>
+              </li>
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">5</p></div>
+                <p class="item-text">
+                  Коментарі і питання в чаті — відповідаю до 24 год
+                </p>
+              </li>
+              <li class="list-item">
+                <div class="item-number-box"><p class="item-number">6</p></div>
+                <p class="item-text">
+                  Доступ назавжди: можна оновлювати намір у майбутньому
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="how-need-wrapper">
+            <p class="how-need-title">Потрібно лише:</p>
+            <p class="how-need-text">
+              папір, 9 кольорових олівців чи фломастерів, 20 хв тиші на день
+            </p>
+            <a class="btn-link-container green" href="">
+              <p class="btn-link">Приєднатись — $9</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x-green.png 1x,
+                      ./src/img/hero/star-2x-green.png 2x
+                    "
+                    width="80"
+                    height="80" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x-green.png"
+                    alt="star-sale"
+                    width="80"
+                    height="80"
+                /></picture>
+                <p class="btn-sale-text">
+                  знижка <br />
+                  <span>-93%</span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="container">
+          <h2 class="title">РЕЗУЛЬТАТ</h2>
+          <p class="subtitle">ПІСЛЯ КУРСУ</p>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/result/image-01-1x.png 1x,
+                    ./src/img/result/image-01-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="item-image"
+                  src="./src/img/result/image-01-1x.png"
+                  alt="image"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="item-text">Активована мандала-маяк — працює 24/7</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/result/image-02-1x.png 1x,
+                    ./src/img/result/image-02-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="item-image"
+                  src="./src/img/result/image-02-1x.png"
+                  alt="image"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="item-text">
+                Внутрішній спокій + чіткий фокус на результат
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/result/image-03-1x.png 1x,
+                    ./src/img/result/image-03-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="item-image"
+                  src="./src/img/result/image-03-1x.png"
+                  alt="image"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="item-text">
+                Перші зміни, знаки, ресурси — уже протягом 7 днів
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/result/image-04-1x.png 1x,
+                    ./src/img/result/image-04-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="item-image"
+                  src="./src/img/result/image-04-1x.png"
+                  alt="image"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="item-text">Малювання → медитація → очищення думок</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/result/image-05-1x.png 1x,
+                    ./src/img/result/image-05-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="item-image"
+                  src="./src/img/result/image-05-1x.png"
+                  alt="image"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="item-text">
+                Мандала лишається оберегом: у гаманці, на заставці, під склянкою
+                води
+              </p>
+            </li>
+          </ul>
+          <p class="text-title">Замість “хочу-не знаю-як”</p>
+          <p class="text">— явний план і рушійна енергія</p>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2 class="title">ВІДГУКИ</h2>
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-01-1x.jpg 1x,
+                      ./src/img/reviews/review-01-2x.jpg 2x
+                    "
+                    width="360"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/reviews/review-01-1x.jpg"
+                    alt="image"
+                    width="360"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-02-1x.jpg 1x,
+                      ./src/img/reviews/review-02-2x.jpg 2x
+                    "
+                    width="360"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/reviews/review-02-1x.jpg"
+                    alt="image"
+                    width="360"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-03-1x.jpg 1x,
+                      ./src/img/reviews/review-03-2x.jpg 2x
+                    "
+                    width="360"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/reviews/review-03-1x.jpg"
+                    alt="image"
+                    width="360"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-04-1x.jpg 1x,
+                      ./src/img/reviews/review-04-2x.jpg 2x
+                    "
+                    width="360"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/reviews/review-04-1x.jpg"
+                    alt="image"
+                    width="360"
+                    height="auto"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/reviews/review-05-1x.jpg 1x,
+                      ./src/img/reviews/review-05-2x.jpg 2x
+                    "
+                    width="360"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/reviews/review-05-1x.jpg"
+                    alt="image"
+                    width="360"
+                    height="auto"
+                /></picture>
+              </div>
+            </div>
+            <div class="swiper-button-prev">
+              <img src="./src/img/swiper-arrow.svg" alt="left" width="40" />
+            </div>
+            <div class="swiper-button-next">
+              <img src="./src/img/swiper-arrow.svg" alt="right" width="40" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <h2 class="title">що може вас</h2>
+          <h2 class="subtitle">цікавити</h2>
+          <div class="questions-container">
+            <ul class="questions-list list">
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <div class="que-title-box">
+                    <p class="faq-number">[ 01 ]</p>
+                    <p class="questions-item-title">Я не художник</p>
+                  </div>
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Шаблон + відео-демо, “намалює” кожен, навіть дитина.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <div class="que-title-box">
+                    <p class="faq-number">[ 02 ]</p>
+                    <p class="questions-item-title">Мало часу</p>
+                  </div>
+
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – 20 хв/день, дивишся коли зручно; доступ навіки.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <div class="que-title-box">
+                    <p class="faq-number">[ 03 ]</p>
+                    <p class="questions-item-title">Чи правда працює?</p>
+                  </div>
+
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Послідовність Фібоначчі та закони Золотого перетину - це
+                      ті закони по яким створене усе живе і неживе, ми будуємо
+                      свій намір на мові Вселенної та по її гармонійним законам,
+                      це правильно запущений квантовий процес реалізації+ фокус
+                      свідомості + Відгуки, сотні вдячних клієнтів, у яких
+                      справді змінилось життя.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <div class="que-title-box">
+                    <p class="faq-number">[ 04 ]</p>
+                    <p class="questions-item-title">Яке бажання підходить?</p>
+                  </div>
+
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Будь-яке, яке можна описати чіткою фразою.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions-item">
+                <div class="questions-title-container">
+                  <div class="que-title-box">
+                    <p class="faq-number">[ 05 ]</p>
+                    <p class="questions-item-title">А якщо не зрушиться?</p>
+                  </div>
+
+                  <div class="questions-item-svg"></div>
+                </div>
+                <div class="questions-answer-container">
+                  <div class="questions-wrapper">
+                    <p class="questions-answer">
+                      – Повторна активація + підтримка автора, або повернення
+                      коштів.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="prices-wrapper last">
+            <div class="old-price">
+              <p class="price-title">Стара ціна</p>
+              <p class="price">$125</p>
+            </div>
+            <div class="new-price">
+              <p class="price-title">Сьогодні</p>
+              <p class="price">$9</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x.png 1x,
+                      ./src/img/hero/star-2x.png 2x
+                    "
+                    width="34"
+                    height="34" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x.png"
+                    alt="star-sale"
+                    width="34"
+                    height="34"
+                /></picture>
+                <p class="btn-sale-text">
+                  <span>-93%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="timer-wrapper">
+            <img
+              src="./src/img/bonuses/timer-sc.svg"
+              alt="image"
+              class="timer-image"
+            />
+            <p class="timer-text">Акційна ціна й бонуси зникнуть через</p>
+            <div id="countdown-three" class="countdown">
+              <div class="countdown-number">
+                <span class="minutes countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="seconds countdown-time"></span>
+              </div>
+              <div><span class="countdown-doubledot">|</span></div>
+              <div class="countdown-number">
+                <span class="milliseconds countdown-time"></span>
+              </div>
+            </div>
+          </div>
+          <a class="last-btn" href="">Забрати курс і зарядити бажання</a>
+          <p class="last-garant">
+            14 днів безумовного повернення – натискай, оплачуй і стартуй!
+          </p>
+        </div>
+      </section>
     </main>
-    <footer class="footer"><div class="container"></div></footer>
+    <footer class="footer">
+      <div class="container">
+        <div class="fop-box">
+          <p class="name">фоп 00000</p>
+          <p class="code">іпн 000000</p>
+        </div>
+        <a class="mail-container" href="mailto:" rel="nofollow" target="_blank"
+          ><img
+            src="./src/img/footer-mail.svg"
+            width="15"
+            height="15"
+            alt="mail"
+          />пошта</a
+        >
+        <a class="phone-container" href="" rel="nofollow" target="_blank"
+          ><img
+            src="./src/img/footer-insta.svg"
+            width="15"
+            height="15"
+            alt="mail"
+          />@instagram</a
+        >
+        <div class="deals-box">
+          <a href="" target="_blank" rel="nofollow" class="deals-link public"
+            >публічна оферта
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="nofollow"
+            class="deals-link confidence"
+            >політика конфіденційності</a
+          >
+        </div>
+        <a
+          class="dising-creator"
+          href="https://www.instagram.com/lisabardadym"
+          target="_blank"
+          rel="nofollow"
+          ><img src="./src/img/insta.svg" alt="insta" height="25" width="25" />
+          <p>
+            розробка сайту <br />
+            <span>lisa bardadym</span>
+          </p></a
+        >
+      </div>
+    </footer>
+    <script type="module" src="./src/js/changeDate.js"></script>
+    <script type="module" src="./src/js/timer.js"></script>
+    <script type="module" src="./src/js/hide.js"></script>
+    <script type="module" src="./src/js/swiper.js"></script>
+    <script type="module" src="./src/js/questions.js"></script>
   </body>
 </html>
