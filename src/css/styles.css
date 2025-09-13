@@ -645,7 +645,7 @@
   letter-spacing: 2.8px;
   text-transform: lowercase;
 
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .about-author .author-image-box {
@@ -654,6 +654,9 @@
   padding: 10px;
 
   background-image: url(../img/author/author-1x.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 360px;
   width: 360px;
   margin-bottom: 40px;
