@@ -306,6 +306,10 @@
   padding: 40px 0 60px;
 }
 
+.bonuses .list {
+  margin-bottom: 20px;
+}
+
 /* bonuses */
 
 .timer-wrapper {
