@@ -711,8 +711,9 @@
 .about-author .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
-
+  width: 100%;
   margin-bottom: 60px;
 }
 
@@ -720,7 +721,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 176px;
+  width: 47%;
   height: 166px;
   border-radius: 10px;
   background: #edf8fd;
